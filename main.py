@@ -13,10 +13,10 @@ app.include_router(actors.router)
 
 
 # CORSMiddleware, ci permette di effettuare chiamate a questo BE da altri sistemi
-app.add_middleware(
-    CORSMiddleware,
-    allow_origin_regex="http://.*",
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+    # CORSMiddleware,
+    # allow_origin_regex="http://.*",
+    # allow_credentials=True,
+    # allow_methods=["*"],
+    # allow_headers=["*"],
+# )
