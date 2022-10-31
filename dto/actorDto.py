@@ -7,14 +7,14 @@ class Actor:
         self.cognome = cognome
 
 
-class ActorDto:
+class ActorDTO:
 
     @classmethod
     def getAllActors(cls):
         data = ActorDao.findAllActors()
         newList = []
         for lista in data:
-            newList.append(Actor(lista[0], lista[1]))
+            newList.append(Actor(lista[0].capitalize(), lista[1].capitalize()))
         return newList
 
     @classmethod
@@ -22,5 +22,5 @@ class ActorDto:
         data = ActorDao.findFirstNameAndLastnameByFilmTitle(titolo_film)
         newList = []
         for lista in data:
-            newList.append(Actor(lista[0], lista[1]))
+            newList.append(Actor(lista[0].capitalize(), lista[1].capitalize()))
         return newList
