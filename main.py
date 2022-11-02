@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from controller import actors, films
 
-from fastapi.middleware.cors import CORSMiddleware
+#from fastapi.middleware.cors import CORSMiddleware
 
 # In questa variabile ci sta l'istanza che tiene in piedi l'applicazione
 app = FastAPI()
