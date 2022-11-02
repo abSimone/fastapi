@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from dto.filmDto import FilmDTO
 
-router = APIRouter(prefix="/films", tags=["films"])
+router = APIRouter(prefix="/films")
 
 
 @router.get('')
