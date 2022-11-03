@@ -1,9 +1,5 @@
 from dao.filmDao import FilmDAO
-
-
-class Film:
-    def __init__(self, title):
-        self.title = title
+from models.film import FilmVO
 
 
 class FilmDTO:
@@ -12,5 +8,5 @@ class FilmDTO:
         data = FilmDAO.findAllFilms()
         newList = []
         for lista in data:
-            newList.append(Film(lista[0].capitalize()))
+            newList.append(FilmVO(lista[0].capitalize()))
         return newList
